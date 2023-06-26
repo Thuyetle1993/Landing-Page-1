@@ -26,6 +26,8 @@ a {
     text-decoration: none;
 }
 .btn {
+    box-sizing: border-box;
+    border: 1px solid currentColor;
     display: inline-block;
     padding: 0 16px;
     line-height: 50px;
@@ -365,7 +367,7 @@ a {
     font-weight: 600;
 }
 .foot .course-btn:hover {
-    background: #ffb900;
+    background: var(--main-color);
     cursor: pointer;
     border: transparent;
 }
@@ -435,4 +437,82 @@ a {
     font-family: Poppins;
     font-style: italic;
     line-height: 1.54;
+}
+
+/* ==== Features ==== */
+/* ==== Features 1 ==== */
+.features {
+    padding: 200px 0;
+}
+.feature-top {
+    display: flex;
+}
+.feature-top .info {
+    display: flex;
+    width: 58%;
+}
+
+.feature-top .info .working {
+    width: 279px;
+    height: 404px;
+    margin-right: 30px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.feature-top .info .working:first-child {
+    margin-top: 34px;
+}
+.feature-top .content {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 130px;
+}
+.feature-top .content .heading {
+    color: #171100;
+    width: 470px;
+    font-size: 3.8rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.26;
+}
+.feature-top .content .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-family: Poppins;
+    line-height: 1.75;
+}
+.feature-top .content .feature-btn {
+    margin-top: 32px;
+    min-width: 137px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.feature-top .content .feature-btn:hover {
+    background: var(--main-color);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* ==== Features 2 ==== */
+.reverse {
+    padding: 165px 0;
+}
+.reverse .info {
+    width: 42%;
+    margin-left: 140px;
+}
+.reverse .info .working {
+    width: 470px;
+    margin-left: 80px;
+}
+.reverse .content {
+    width: 58%;
+    margin-left: 0;
+}
+.reverse .content .heading {
+    width: 570px;
 }
