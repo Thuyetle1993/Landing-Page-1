@@ -442,7 +442,7 @@ a {
 /* ==== Features ==== */
 /* ==== Features 1 ==== */
 .features {
-    padding: 200px 0;
+    padding: 200px 0 175px;
 }
 .feature-top {
     display: flex;
@@ -499,7 +499,7 @@ a {
 
 /* ==== Features 2 ==== */
 .reverse {
-    padding: 165px 0;
+    padding: 165px 0 0;
 }
 .reverse .info {
     width: 42%;
@@ -515,4 +515,94 @@ a {
 }
 .reverse .content .heading {
     width: 570px;
+}
+/* ==== Blog ==== */
+.blog {
+    background: #fffcf4;
+    padding: 96px 135px 140px;
+}
+.blog .desc {
+    color: #696262;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    width: 448px;
+    height: 56px;
+    margin: auto;
+}
+.blog-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    gap: 30px;
+}
+.blog-list .blog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+    background: #fff;
+}
+.blog-item:hover {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.blog-list .blog-thumb {
+    width: 370px;
+    height: 250px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+.blog-item .time {
+    position: relative;
+    /* Sử dụng inline-flex để có thuộc tính flex nhưng ko chiếm hết độ rộng hết ko gian thẻ cha */
+    display: inline-flex;
+    align-items: center;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    padding-top: 20px;
+    margin-left: 30px;
+    padding-bottom: 12px;
+}
+
+.blog-item .time::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--main-color);
+}
+.blog-item .time::after {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    /* Khi dùng với thẻ cha là inline-flex, chiều rộng sẽ + thêm 27px so với thẻ cha */
+    right: -27px;
+    bottom: 0;
+    height: 1px;
+    content: "";
+    border-radius: 0.5px;
+    background: #e2dfda;
+}
+.blog-item .heading a {
+    display: inline-block;
+    color: #171100;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    font-family: Poppins;
+    font-weight: 600;
+    margin: 12px 20px 12px;
+}
+.blog-item .blog-cta {
+    min-width: 118px;
+    margin-left: 20px;
+    margin-bottom: 28px;
+    font-size: 1.4rem;
+}
+.blog-item .blog-cta:hover {
+    background: var(--main-color);
+    cursor: pointer;
+    border: 1px solid transparent;
 }
